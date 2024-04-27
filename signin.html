@@ -1,0 +1,126 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+/* Form container */
+.form-container {
+    display: none; /* Початково ховаємо форму */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Колір фону форми */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь для форми */
+}
+
+/* Form label */
+.form-label {
+    margin-bottom: 5px; /* Відступ між міткою та полем вводу */
+    color: #333333; /* Колір тексту міток */
+}
+
+/* Form input fields */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Відступ між полями вводу */
+    border: 1px solid #cccccc; /* Обрамлення полів вводу */
+    border-radius: 5px;
+}
+
+/* Form text below input */
+.form-text {
+    color: #666666; /* Колір тексту нижче поля вводу */
+}
+
+/* Form checkbox */
+.form-check-input {
+    margin-right: 10px; /* Відступ між прапорцем та текстом */
+}
+
+/* Form submit button */
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #4F7302; /* Колір кнопки */
+    color: #ffffff; /* Колір тексту кнопки */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+/* Hover state for submit button */
+.btn-primary:hover {
+    filter: brightness(1.1); /* Зміна яскравості при наведенні */
+    
+ 
+}
+    
+    .form{
+        height: 435px;
+        width: 400px;
+        margin: auto;
+        margin-top: 3%;
+        background-color: white;
+        border-color: black;
+        border-width: 1;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        padding: 12px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #emailHelp{
+        font-size: 12px;
+    }
+    
+    h1{
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        color:#4F7302; /* Колір кнопки */
+        margin-top: 100px;
+
+    }
+    a{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+<h1>Sign In</h1>
+<div class='form'>
+<form>
+  <div class="mb-3">
+      <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nickname</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+    <label for="exampleInputEmail1" class="form-label">e-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+    
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Confirm password</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+    <div id="emailHelp" class="form-text">We'll never share your email</div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+  </div>
+    
+  <button type="submit" class="btn btn-primary">Log in</button>
+    
+  <a href="home.html">Return home</a>
+    
+</form>
+</div>

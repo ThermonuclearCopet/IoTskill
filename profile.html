@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- Підключення CSS стилів -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключення шрифту Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Стилі для елементів профілю -->
+    <style>
+        /* CSS стилі для елементів профілю */
+          body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .grid-container {
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            margin-top:0px;
+            margin-left: 44%;
+            }
+
+            .grid-item {
+              background-color: #f4f4f4;
+              padding: 20px;
+              text-align: center;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+              margin: 20px;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .grid-item:hover,
+            .grid-item:focus {
+              transform: translateY(-10px);
+              box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            }
+        
+        .profile{
+            
+           height: 600px;
+           width: 20%; 
+           float: left;
+           margin-left: 2%; 
+        }
+
+        .profile-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .profile-section h2 {
+            color: #4F7302;
+            margin-bottom: 20px;
+        }
+
+        .profile-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .profile-details p {
+            margin-bottom: 10px;
+        }
+        
+        .tasks{
+            float: right;
+            color: #4F7302;
+            margin-right: 30%;
+            margin-top: 2%;
+            
+        }
+
+        /* Footer styles */
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: #4F7302;
+            color: #C0D904;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            line-height: 50px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <div>
+                    <h1>IoTSkill</h1>
+                </div>
+            </div>
+            <nav>
+                <li><span><a href="home.html">Home</a></span></li>
+                <li><span><a href="">Get help</a></span></li>
+                <li><span><a href="">About</a></span></li>
+                <li><span><a href="">Contact us</a></span></li>
+                <li><span><a href="" class="button">My profile</a></span></li>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile">
+    <section class="profile-section">
+        <h2>User Profile</h2>
+        <div class="profile-details">
+            <p>Name: John Doe</p>
+            <p>Email: johndoe@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+    </section>
+        
+    </div>
+    <h2 class="tasks">My tasks</h2>
+     <div class="grid-container">
+    <div class="grid-item">
+      <h2 class="poppins-font">Title</h2>
+      <p class="poppins-font">----</p>
+      <p class="poppins-font">----</p>
+    </div>
+    <div class="grid-item">
+      <h2 class="poppins-font">Title</h2>
+      <p class="poppins-font">----</p>
+      <p class="poppins-font">----</p>
+    </div>
+    <div class="grid-item">
+      <h2 class="poppins-font">Title</h2>
+      <p class="poppins-font">----</p>
+      <p class="poppins-font">----</p>
+    </div>
+    
+    </div>
+   
+    <footer>
+        <div class="inner">
+            <p>© 2024 All rights reserved | IoTSkills</p>
+        </div>
+    </footer>
+</body>
+</html>
