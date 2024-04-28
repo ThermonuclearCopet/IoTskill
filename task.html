@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task</title>
-    <!-- Підключення CSS стилів -->
+
     <link rel="stylesheet" href="style.css">
-    <!-- Підключення шрифту Poppins -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-    /* CSS стилі для сторінки завдань */
 
-/* Task Section styles */
+
+
         
         *{
             font-family: 'Poppins', sans-serif;
@@ -60,8 +60,8 @@
             font-family: 'Poppins', sans-serif;
             text-align: center;
             line-height: 50px;
-            position: absolute; /* Встановлюємо абсолютне позиціонування */
-            bottom: 0; /* Розміщуємо внизу сторінки */
+            position: absolute; 
+            bottom: 0; 
             left: 0;
             }
 
@@ -81,12 +81,10 @@
     <header>
         <div class="inner">
             <div class="logo">
-                <div>
-                    <h1>IoTSkill</h1>
-                </div>
+                <h1>IoTSkill</h1>
             </div>
             <nav>
-                <li><span><a href="home.html">Home</a></span></li>
+                <li><span><a href="index.html">Home</a></span></li>
                 <li><span><a href="">Get help</a></span></li>
                 <li><span><a href="">About</a></span></li>
                 <li><span><a href="">Contact us</a></span></li>
@@ -98,17 +96,34 @@
     <!-- Task Section -->
     <div class="task-section">
         <div class="task">
-            <h2 class="task-title">Task</h2>
-            <p class="task-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et eros vitae leo volutpat sollicitudin. Vivamus nec orci nec tortor congue vehicula. Nam feugiat, felis id tincidunt consectetur, dolor turpis maximus lorem, eget fringilla velit tortor ac turpis.</p>
-            <p class="task-points">Points: 50</p>
+            <h2 id="task-title" class="task-title">Task</h2>
+            <p id="task-description" class="task-description">Loading task details...</p>
+            <p id="task-points" class="task-points">Points: Loading...</p>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-    <div class="inner">
-        <p>© 2024 All rights reserved | IoTSkills</p>
-    </div>
-</footer>
+        <div class="inner">
+            <p>© 2024 All rights reserved | IoTSkills</p>
+        </div>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const taskId = params.get('id'); 
+
+        fetch(`get_task_by_id.php?id=${taskId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('task-title').textContent = data.title;
+                document.getElementById('task-description').textContent = data.description;
+                document.getElementById('task-points').textContent = 'Points: ' + data.points;
+            })
+            .catch(error => {
+                console.error('Error loading task data:', error);
+                document.getElementById('task-description').textContent = 'Failed to load task details.';
+            });
+    </script>
 </body>
 </html>

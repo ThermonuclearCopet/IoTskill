@@ -1,0 +1,8 @@
+DirectoryIndex index.html login.html register.html task.html index.php login.php register.php login.php get_task_by_id.php get_tasks.php
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "Content-Type"
+
+
+Order Allow,Deny
+Allow from all
